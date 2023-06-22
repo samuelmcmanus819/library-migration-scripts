@@ -1,5 +1,5 @@
 # Create a Debian 12 Linode with 4 GB Space
-apt update
+apt update && apt upgrade -y
 apt install sudo wget gnupg -y
 wget -q -O- https://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
 apt update
@@ -11,6 +11,7 @@ apt install mariadb-server -y
 # INTRAPORT="8000"
 # OPACPORT="8001"
 # DOMAIN="Your-desired-domain
+##### This should be updated to use 443 and a self-signed cert in the future
 a2enmod rewrite
 a2enmod cgi
 service apache2 restart
