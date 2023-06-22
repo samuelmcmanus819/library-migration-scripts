@@ -1,5 +1,5 @@
 # Requirements
-1. Have a marc file named `items.marc` in this directory
+1. Have a KOC template with no data in it called `master.koc` in this directory
 2. Install pymarc
 
 # Workflow
