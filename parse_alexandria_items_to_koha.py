@@ -7,14 +7,17 @@ def parse_record(record):
     record_type = title_field[0].get('h')
     if "[" in record_type:
         record_type = record_type[1:-1]
-    if record_type == "paperback" or record_type == "big book" or record_type == "great books" or record_type == "boardbook" or record_type == "hardback" or record_type == "text large print" or record_type == "signed by author" or record_type == "wall chart" or record_type == "oprah book" or record_type == "manipulative":
+    if record_type == "paperback" or record_type == "big book" or record_type == "great books" or record_type == "boardbook" or 
+                record_type == "hardback" or record_type == "text large print" or record_type == "signed by author" or 
+                record_type == "wall chart" or record_type == "oprah book" or record_type == "manipulative" or
+                record_type == "notebook":
         record_type = "book"
     elif record_type == "ringed notebook":
         record_type = "notebook"
     elif record_type == "audio book":
         record_type = "Audiobook"
-    elif record_type == "spanish video" or record_type == "child video":
-        record_type = "video"
+    elif record_type == "spanish video" or record_type == "child video" or record_type == "video":
+        record_type = "DVD"
     elif record_type == "audio cd":
         record_type = "CD"
     elif record_type == "hot spot":
