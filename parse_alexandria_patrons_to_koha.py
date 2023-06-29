@@ -8,7 +8,7 @@ with open('patrons.csv', 'r') as input_file:
 
     destination_columns = ['cardnumber', 'surname', 'firstname', 'middle_name', 'address', 'address2', 'city', 'state', 'zipcode',
             'country', 'email', 'phone', 'mobile', 'dateofbirth', 'branchcode', 'categorycode', 'dateenrolled', 'dateexpiry', 
-            'contactname', 'sex', 'password', 'userid', 'opacnote', 'contactnote', 'lastseen']
+            'contactname', 'sex', 'password', 'userid', 'borrowernotes', 'contactnote', 'lastseen']
 
     with open('patrons_parsed.csv', 'w') as output_file:
         writer = csv.DictWriter(output_file, fieldnames=destination_columns, delimiter=',')
@@ -66,7 +66,7 @@ with open('patrons.csv', 'r') as input_file:
                 'sex': sex,
                 'password': row['Last Name'].lower(),
                 'userid': row['Username'],
-                'opacnote': row['General Notes'],
+                'borrowernotes': row['General Notes'] + "\n" + row['Alert Notes'],
                 'contactnote': row['Contact Notes'],
                 'lastseen': last_use_date
             }
