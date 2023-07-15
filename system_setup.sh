@@ -11,7 +11,7 @@ apt install koha-common mariadb-server -y
 # INTRAPORT="80"
 # INTRASUFFIX="-admin"
 # OPACPORT="80"
-# DOMAIN=".your.desired.domain"
+# DOMAIN=".newwaverlypubliclibrary.org/"
 cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/koha-ssl.conf
 a2enmod ssl
 a2dissite default-ssl.conf
@@ -38,7 +38,7 @@ service apache2 restart
 # 	Include /etc/koha/apache-shared-opac-plack.conf
 # 	Include /etc/koha/apache-shared-opac.conf
 
-# 	ServerName koha.your.dns.name
+# 	ServerName koha.newwaverlypubliclibrary.org
 # 	SetEnv KOHA_CONF "/etc/koha/sites/koha/koha-conf.xml"
 # 	AssignUserID koha-koha koha-koha
 
@@ -66,7 +66,7 @@ service apache2 restart
 # 	Include /etc/koha/apache-shared-intranet-plack.conf
 # 	Include /etc/koha/apache-shared-intranet.conf
 
-# 	ServerName koha-admin.your.dns.name
+# 	ServerName koha-admin.newwaverlypubliclibrary.org
 # 	SetEnv KOHA_CONF "/etc/koha/sites/koha/koha-conf.xml"
 # 	AssignUserID koha-koha koha-koha
 
