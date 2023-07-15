@@ -20,22 +20,11 @@ a2enmod rewrite
 a2enmod cgi
 service apache2 restart
 
-
-
-
-
-
-
 koha-create --create-db koha
 a2enmod headers proxy_http
 koha-plack --enable koha
 koha-plack --start koha
 service apache2 restart
-
-
-
-
-
 
 # Edit the /etc/apache2/sites-available/koha-ssl.conf as follows
 # OPAC
@@ -94,10 +83,6 @@ service apache2 restart
 # 		SSLOptions +StdEnvVars
 # 	</Directory>
 # </VirtualHost>
-
-
-
-
 
 # View your koha root passwd
 koha-passwd koha
