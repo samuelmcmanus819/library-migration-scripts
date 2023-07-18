@@ -3,7 +3,7 @@ apt update && apt upgrade -y
 apt install sudo wget gnupg -y
 wget -q -O- https://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
 apt update
-echo 'deb http://debian.koha-community.org/koha oldstable main' | sudo tee /etc/apt/sources.list.d/koha.list
+echo 'deb http://debian.koha-community.org/koha stable main' | sudo tee /etc/apt/sources.list.d/koha.list
 apt update
 apt install koha-common mariadb-server -y
 
