@@ -84,6 +84,12 @@ service apache2 restart
 # 	</Directory>
 # </VirtualHost>
 
+# Install Certbot
+apt install snapd -y
+snap install --classic certbot
+ln -s /snap/bin/certbot /usr/bin/certbot
+certbot --apache
+
 # View your koha root passwd
 koha-passwd koha
 # Go to the INTRAPORT web UI and log in with `koha_koha`:`<revealed-password>`
